@@ -1,0 +1,66 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+
+raw_data:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/raw_dataset.csv
+
+deduplicated_data:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/deduplicated_data.parquet
+
+train_data:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/train_data.parquet
+
+test_data:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/test_data.parquet
+
+internal_train:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/internal_train.parquet
+
+internal_val:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/internal_val.parquet
+
+fe_params:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/fe_params.pkl
+
+scalers_params:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/scalers_params.pkl
+
+scaled_internal_train:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/scaled_internal_train
+
+scaled_internal_val:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/scaled_internal_val
+
+selected_train_data:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/selected_train_data.parquet
+
+selected_feature_names:
+  type: pickle.PickleDataSet
+  filepath: data/05_model_input/selected_feature_names.pkl
+
+selected_val_data:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/selected_val_data.parquet
+
+best_model_birch:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/best_model_birch.pkl
+
+pycaret_predictions:
+  type: pandas.ParquetDataSet
+  filepath: data/07_model_output/pycaret_predictions.parquet
+

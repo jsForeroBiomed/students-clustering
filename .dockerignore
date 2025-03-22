@@ -1,0 +1,23 @@
+# Ignorar el repositorio de Git
+.git
+.gitignore
+
+# Ignorar datos grandes o sensibles
+data/01_raw/
+data/02_intermediate/
+data/03_primary/
+data/07_model_output/
+data/08_reporting/
+
+# Ignorar notebooks si no quieres que vayan al contenedor
+notebooks/
+**.ipynb_checkpoints
+
+# Ignorar cachés y archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar configuraciones locales de VS Code
+.vscode/
