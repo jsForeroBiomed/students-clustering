@@ -28,10 +28,7 @@ Incluye información como:
 
 ## 🚀 Despliegue
 
-La aplicación está desplegada en Google Cloud Platform usando Streamlit. Puedes acceder a la interfaz aquí:
-
-👉 [Acceder a la app](https://streamlit-students-clustering-gpo3pba6kq-uc.a.run.app/)
-
+La aplicación se desplegó en Google Cloud Platform usando Streamlit. 
 En ella puedes:
 - Subir nuevos datos y hacer inferencias individuales
 - Visualizar a qué cluster pertenece el estudiante ingresado
